@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>iFoodBOT — Terms & Privacy</title>
+<style>
+  :root {
+    --bg: #ffffff;
+    --text: #1a1a1a;
+    --muted: #5a5a5a;
+    --accent: #d0342c;
+    --border: #e5e5e5;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #15181c;
+      --text: #eaeaea;
+      --muted: #a0a0a0;
+      --accent: #ff5c4d;
+      --border: #2a2e33;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #15181c;
+    --text: #eaeaea;
+    --muted: #a0a0a0;
+    --accent: #ff5c4d;
+    --border: #2a2e33;
+  }
+  * { box-sizing: border-box; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 2rem 1.25rem calc(3rem + env(safe-area-inset-bottom, 0px));
+    padding-top: calc(2rem + env(safe-area-inset-top, 0px));
+  }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+  h2 {
+    font-size: 1.15rem;
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    color: var(--accent);
+  }
+  p, li { color: var(--text); }
+  .muted { color: var(--muted); font-size: 0.9rem; }
+  ul { padding-left: 1.2rem; }
+  nav {
+    display: flex;
+    gap: 1rem;
+    margin: 1rem 0 2rem;
+    font-size: 0.9rem;
+  }
+  nav a { color: var(--accent); text-decoration: none; }
+  nav a:hover { text-decoration: underline; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>iFoodBOT — Legal documents</h1>
+  <p class="muted">Automated moderation app for r/ifood. Last updated: September 2026.</p>
+  <nav>
+    <a href="#terms">Terms and Conditions</a>
+    <a href="#privacy">Privacy Policy</a>
+  </nav>
+
+  <h2 id="terms">Terms and Conditions</h2>
+  <p>iFoodBOT is an automated moderation app built for the r/ifood subreddit, running on Reddit Inc.'s Devvit platform.</p>
+  <ul>
+    <li>The app is provided "as is", with no guarantee of uninterrupted operation.</li>
+    <li>The app takes moderation actions (removal, filtering for review, flair updates, notifications) based on rules configured by the subreddit's moderators and on automated analysis, including third-party artificial intelligence.</li>
+    <li>Automated decisions may contain errors. The subreddit's moderators retain final authority to review, reverse, or adjust any action taken by the app.</li>
+    <li>Use of the app is also subject to Reddit's Terms of Service and the Devvit platform's policies.</li>
+    <li>The developer may update or discontinue app features at any time.</li>
+  </ul>
+
+  <h2 id="privacy">Privacy Policy</h2>
+  <p>This policy describes how iFoodBOT handles data while operating on the r/ifood subreddit.</p>
+
+  <p><strong>Data processed:</strong></p>
+  <ul>
+    <li>Public content of posts and comments (title, body text, flair) submitted to the subreddit where the app is installed.</li>
+    <li>Public account identifiers (username, user ID) associated with that content.</li>
+    <li>Public metadata such as report counts and subreddit-specific karma.</li>
+    <li>Whether the account has a verified email address (used only to enforce a subreddit anti-spam rule; the email address itself is never accessed).</li>
+    <li>The user's current subreddit flair text, used to apply a karma-based rank badge.</li>
+  </ul>
+
+  <p><strong>How data is used:</strong></p>
+  <ul>
+    <li>Posts are sent to third-party artificial intelligence providers (Google Gemini, and Groq as a fallback in case of unavailability) solely to check compliance with the subreddit's rules. The post's text is included in the prompt sent to these services.</li>
+    <li>Per-account infraction counters ("strikes") are stored persistently on Devvit's own infrastructure (Redis, managed by Reddit Inc.), associated with the user's account identifier.</li>
+    <li>Subreddit-specific karma is read to automatically update a user's flair with a rank badge; no karma data is stored outside of Reddit's own systems.</li>
+    <li>No data is sold, shared with advertisers, or used for any purpose beyond moderating the subreddit.</li>
+  </ul>
+
+  <p><strong>Third-party sharing:</strong></p>
+  <ul>
+    <li>Google Gemini (Google LLC) — receives the text of the analyzed post, subject to Google's privacy policy.</li>
+    <li>Groq (Groq Inc.) — used only as a fallback if Gemini is unavailable, receives the same post text, subject to Groq's privacy policy.</li>
+  </ul>
+
+  <p><strong>Retention:</strong> strike counters remain stored for as long as the app is installed on the subreddit, and may be removed upon request to r/ifood's moderation team.</p>
+
+  <p><strong>Contact:</strong> questions about this policy can be sent via Modmail to r/ifood moderation.</p>
+</div>
+</body>
+</html>
