@@ -63,7 +63,7 @@
 <body>
 <div class="wrap">
   <h1>iFoodBOT — Legal documents</h1>
-  <p class="muted">Moderation and community app for r/ifood. Last updated: October 2026.</p>
+  <p class="muted">Moderation and community app for r/ifood. Last updated: November 2026.</p>
   <nav>
     <a href="#terms">Terms and Conditions</a>
     <a href="#privacy">Privacy Policy</a>
@@ -78,7 +78,7 @@
     <li>The app also offers community features: karma and rank badges, a leaderboard, weekly missions, participation streaks, achievements, trophies, weekly highlights, member profiles with optional customization, a weekly question, a weekly duel (votes and predictions) and a participation radar that suggests posts where a reply could help. Prizes in these features, such as bonus karma, trophies or achievements, are recognition for taking part in r/ifood only. They have no monetary value, cannot be exchanged for anything outside the community, and may be changed, adjusted, granted, revoked or reset by the moderators or by updates to the app.</li>
     <li>The app publishes posts and comments from its own account, for example the weekly question, the weekly duel and welcome comments.</li>
     <li>Attempts to manipulate these features, for example through fake or automated activity, may lead to removal of the related recognition and to moderation action under the subreddit rules.</li>
-    <li>Participation in the community features is optional. Members can leave them at any time in the app's Options tab.</li>
+    <li>Participation in the community features is optional. Members can leave them, and delete the data the app holds about them, at any time in the app's Options tab.</li>
     <li>Use of the app is also subject to Reddit's Terms of Service and the Devvit platform's policies.</li>
     <li>The developer may update or discontinue app features at any time.</li>
   </ul>
@@ -95,6 +95,8 @@
     <li>The user's current subreddit flair text, used to choose and apply a karma-based rank badge.</li>
     <li>Participation records created by the app, kept per account: bonus karma and its history, thanks given and received, counts of posts and comments, mission progress, participation streak, achievements and trophies, weekly highlights, a list of recent activity, the history of the member's votes and predictions in weekly duels, and the member's own settings (opt-outs, profile privacy, profile customization, and display preferences such as the pinned trophy showcase and whether the participation radar card is kept open).</li>
     <li>Short-lived records kept for the participation radar: for recent posts, the number of replies, the usernames of the accounts that replied, short excerpts of a few replies, and the answer given by the AI provider. They are used to suggest posts to members and to avoid suggesting a post a member has already replied to.</li>
+    <li>Examples corrected by moderators for the participation radar: the title of a post and the correction chosen by a moderator, without usernames, kept for 30 days.</li>
+    <li>Account checks: once a day the app looks up, in small batches, whether the usernames it has stored still exist on Reddit. Only the public lookup result and the date it was first missing are kept.</li>
   </ul>
 
   <p><strong>How data is used:</strong></p>
@@ -121,14 +123,22 @@
     <li>Moderators do not take part in the rankings.</li>
   </ul>
 
-  <p><strong>Your choices:</strong> members can stop using the rank flair and/or leave the community features (ranking, missions, streak, achievements) at any time in the app's Options tab, and can make their profile private.</p>
+  <p><strong>Your choices:</strong> members can stop using the rank flair and/or leave the community features (ranking, missions, streak, achievements) at any time in the app's Options tab, and can make their profile private. In Options &gt; My data, a member can also delete the data the app holds about them (see "Deleting data" below).</p>
 
   <p><strong>Third-party sharing:</strong></p>
   <ul>
     <li>Google Gemini (Google LLC) &mdash; receives the text of analyzed posts and comments together with the subreddit rules and, for the participation radar, the text of some recent posts and short excerpts of a few replies, subject to Google's privacy policy.</li>
   </ul>
 
-  <p><strong>Retention:</strong> some records expire automatically. Approximate periods: the list of recent activity, about 40 days; karma history, about 45 days; weekly mission progress, about 90 days; weekly duel history, about 800 days; participation radar records, 3 to 4 days; and short-lived caches. The other records (for example bonus karma, counters, achievements, trophies, strikes and the member's settings) remain stored for as long as the app is installed on the subreddit, and may be removed upon request to r/ifood's moderation team.</p>
+  <p><strong>Retention:</strong> records about members (bonus karma, counters, achievements, trophies, the list of recent activity, mission progress, duel history, the member's settings and similar records) have no automatic expiry. They remain stored while the app is installed on the subreddit and the account exists, until the member deletes them or the account is deleted as described below. Records that only matter for a limited window expire automatically: daily karma snapshots used to show recent progress (about 45 days; only the latest 35 are used), participation radar copies of posts and replies (3 to 4 days), radar examples corrected by moderators (30 days) and short-lived caches.</p>
+
+  <p><strong>Deleting data:</strong></p>
+  <ul>
+    <li>Members can delete the data the app holds about them at any time in the app's Options tab, under "My data". The deletion is permanent. It removes the member's profile, bonus karma, thanks given, counters, achievements, trophies, streak, customization, activity history, mission progress, duel history and votes, and ranking position, and resets the rank shown on the member's flair. The member can also choose to leave the community features at the same time.</li>
+    <li>When a post or comment is deleted on Reddit, the app deletes the related content it had kept (such as radar copies and examples).</li>
+    <li>When a Reddit account is deleted, banned or suspended (the app cannot tell these cases apart), the member is hidden from rankings and profiles and, if the account is still not found after 30 consecutive days, the app erases the data it holds about that member. If the account is found again, the count starts over.</li>
+    <li>Not deleted: moderation strikes and moderator notes (kept as a moderation record), and the totals that other members received in duels and thanks, which do not identify who voted or thanked. Text already sent to Google Gemini for analysis cannot be deleted by the app; it contains no usernames. Posts and comments on Reddit itself are not removed by this deletion; members delete them on Reddit.</li>
+  </ul>
 
   <p><strong>Contact:</strong> questions about this policy can be sent via Modmail to r/ifood moderation.</p>
 </div>
